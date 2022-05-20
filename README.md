@@ -54,5 +54,3 @@ npm start
 
 ![image](https://user-images.githubusercontent.com/60350664/169598057-5491448c-7a00-4807-9617-1d38abfe02e0.png)
 
-
-![Uploading image.png…]()
