@@ -1,0 +1,12 @@
+.breadcrumb {
+    @include flex__item;
+    padding: $p-16 0;
+    &__category {
+        text-decoration: none;
+        color: $light-grey;
+        &--separator {
+            margin: 0 0.3rem;
+        }
+    }
+   
+}

@@ -1,0 +1,34 @@
+@mixin flex__item {
+    display: flex;
+}
+
+@mixin flex__item__center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin col-12 {
+    @extend %col;
+    max-width: 1200px;  
+}
+
+@mixin col-10 {
+    @extend %col;
+    max-width: 1000px;
+}
+
+@mixin col-9 {
+    @extend %col;
+    max-width: 900px;
+}
+
+@mixin col-8 {
+    @extend %col;
+    max-width: 800px;
+}
+
+@mixin col-2 {
+    @extend %col;
+    max-width: 200px;
+}

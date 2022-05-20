@@ -1,0 +1,15 @@
+@import './config/variables';
+@import './config/extends';
+@import './config/mixins';
+@import './base/base';
+
+@import './layout/header';
+@import './layout/main';
+
+@import './components/welcome';
+@import './components/notfound';
+@import './components/breadcrumb';
+@import './components/results';
+@import './components/pdp';
+
+@import './layout/footer';

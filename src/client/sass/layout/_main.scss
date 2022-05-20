@@ -1,0 +1,6 @@
+main {
+    @include col-10;
+    @media only screen and (max-width: 1100px) {
+        padding: $p-16;
+    }
+}

@@ -1,0 +1,94 @@
+.pdp {
+    @include flex__item;
+    background-color: $white;
+    border-radius: $b-4;
+    box-shadow: 0 1px 2px 0 #00000040;
+    outline: 1px solid $white-grey;
+
+    @media only screen and (max-width: 1100px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__column-left{
+        max-width: 680px;
+        width: 100%;
+        background-color: $white;
+        &--picture {
+            & > img {
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+
+        &--description {
+            padding: $p-32;
+            text-align: justify;
+            font-size: 1rem;
+            .title {
+                padding-bottom: $p-32;
+                font-size: 1.75rem;
+                @media only screen and (max-width: 1100px) {
+                    text-align: center;
+                }
+            }
+
+            .info {
+                color: $light-grey;
+            }
+        }
+    }
+
+    &__column-right {
+        max-width: 320px;
+        width: 100%;
+        padding-left: $p-16;
+
+        &--wrap {
+            padding: $p-32  $p-16 ;
+            border: 1px solid #eeeeee;
+            margin-right: $p-16;
+            margin-top: $p-16;
+            border-radius: $b-4;
+            position: sticky;
+            top: 1rem;
+        }
+    }
+
+    .wrap {
+        &__sold {
+            @include flex__item;
+            align-items: center;
+            padding-bottom: $p-16;
+            &--value {
+                color: $light-grey;
+            }
+            &--shipping {
+                margin-left: $p-16;
+            }
+        }
+    
+        &__title {
+            & > h1 {
+              font-size: 1.5rem;
+              padding-right: $p-16;
+            }
+        }
+    
+        &__price {
+            padding: $p-32 0;
+            font-size: 2.25rem;
+        }
+    
+        &__btn-buy {
+            width: 100%;
+            padding: 0.7rem 0;
+            background-color: $blue;
+            border: none;
+            color: $white;
+            border-radius: $b-4;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+    }
+}

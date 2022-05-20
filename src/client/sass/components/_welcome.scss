@@ -1,0 +1,9 @@
+.welcome {
+    @include flex__item__center;
+    height: calc(90vh - 40px);
+    &__title {
+        font-size:1.2rem;
+        color: #d1d1d1;
+        font-weight: bold;
+    }
+}
