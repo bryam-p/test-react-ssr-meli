@@ -1,4 +1,5 @@
 .footer {
+    @include flex__item__center;
     width: 100%;
     background: #E7E7E5;
     position: relative;

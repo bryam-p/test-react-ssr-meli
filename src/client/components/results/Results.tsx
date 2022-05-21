@@ -5,6 +5,8 @@ import { useContext, useEffect, memo } from "react"
 import { SearchContext } from "../../context/SearchContext"
 import { Breadcrumb } from "../breadcrumb/Breadcrumb"
 import { ResultScreen } from "./ResultScreen"
+import SkeletonSearch from "./SkeletonSearch"
+
 
 export const Results = memo(function Results() {
 
@@ -19,14 +21,10 @@ export const Results = memo(function Results() {
 
     useEffect(() => {
         setSearchData({ ...searchData, data: results })
-    }, [])
+    }, [results])
 
     return (
         <>
-            {
-                loading && <div>Loading...</div>
-            }
-
             <Breadcrumb breadName={results?.categories?.values} />
 
             <section className="querySearch">
@@ -34,11 +32,22 @@ export const Results = memo(function Results() {
                 <h1>{results?.query}</h1>
             </section>
 
-            <ol className="results">
-                {results?.items?.map(item => (
-                    <ResultScreen key={item.id} {...item} />
-                ))}
-            </ol>
+            {
+                loading ?
+                    <>
+                        <SkeletonSearch />
+                        <SkeletonSearch />
+                        <SkeletonSearch />
+                        <SkeletonSearch />
+                    </>
+                    :
+                    <ol className="results">
+                        {results?.items?.map(item => (
+                            <ResultScreen key={item.id} {...item} />
+                        ))}
+                    </ol>
+
+            }
         </>
     )
 })

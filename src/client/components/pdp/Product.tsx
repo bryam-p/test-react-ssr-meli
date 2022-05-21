@@ -4,6 +4,7 @@ import { useFetchProduct } from "../../hooks/useFetchProduct";
 import { Breadcrumb } from "../breadcrumb/Breadcrumb";
 import { ProductScreen } from "./ProductScreen";
 import { DescriptionScreen } from "./DescriptionScreen";
+import { SkeletonPDP } from "./SkeletonPDP";
 
 
 export const Product = () => {
@@ -15,7 +16,7 @@ export const Product = () => {
             <Breadcrumb breadName={data.categories} />
 
             {
-                loading && <div>Loading..</div>
+                loading && <SkeletonPDP />
             }
 
             <section className="pdp">

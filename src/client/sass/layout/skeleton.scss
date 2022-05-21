@@ -1,0 +1,63 @@
+@keyframes aniHorizontal {
+    0% {
+      background-position: -100% 0;
+    }
+  
+    100% {
+      background-position: 100% 0;
+    }
+  }
+  
+  .datagrid__row {
+    position: relative;
+    margin-bottom: $b-4;
+    max-width: 1000px;
+    height: 217px;
+  }
+
+  .datagrid__row__pdp {
+    position: relative;
+    margin-bottom: $b-4;
+    max-width: 1000px;
+    height: 981px;
+  }
+  
+  .datagrid__row:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation-name: aniHorizontal;
+    animation-duration: 3.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    background: linear-gradient(
+      to right,
+      #cccccc 2%,
+      #666666 18%,
+      #cccccc 33%
+    );
+    background-size: 50%;
+    mix-blend-mode: overlay;
+    border-radius: $b-4;
+}
+
+.datagrid__row__pdp:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation-name: aniHorizontal;
+  animation-duration: 3.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  background: linear-gradient(
+    to right,
+    #cccccc 2%,
+    #666666 18%,
+    #cccccc 33%
+  );
+  background-size: 50%;
+  mix-blend-mode: overlay;
+  border-radius: $b-4;
+}
